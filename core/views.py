@@ -8,8 +8,8 @@ def index(request):
         'shoes': shoes,
     })
 
-def shoe_detail(request, shoe_id):
-    shoe = Shoe.object.get(pk=shoe_id)
-    return render(request, 'shoe_deatil.html', {
+def shoe_detail(request, slug):
+    shoe = Shoe.objects.get(slug=slug)
+    return render(request, 'core/templates/shoe_detail.html', {
         'shoe': shoe,
     })

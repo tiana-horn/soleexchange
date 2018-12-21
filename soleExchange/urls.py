@@ -33,7 +33,7 @@ urlpatterns = [
     # path('profile/', views.profile, name='profile'),
     path('admin/', admin.site.urls),
     path('', views.index, name='home'),
-    path('shoe/<int:shoe_id>/', views.shoe_detail, name='shoe_detail'),
+    path('shoe/<slug>/', views.shoe_detail, name='shoe_detail'),
     path(
         'register/',
         TemplateView.as_view(template_name='register.html'),

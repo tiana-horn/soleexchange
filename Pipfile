@@ -12,6 +12,7 @@ django-el-pagination = "*"
 pillow = "*"
 django-registration-redux = "*"
 django-allauth = "*"
+python-dotenv = "*"
 
 [requires]
 python_version = "3.7"
