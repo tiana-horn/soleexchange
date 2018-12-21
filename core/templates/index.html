@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% comment %} {% load el_pagination_tags %} {% endcomment %}
+
+{% block title %}
+    Sole Exchange - {{ block.super }}
+{% endblock title %}
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+{% block header %}
+
+{% endblock header %}             
+                    
+
+{% block content %}
+
+<header class="georgia">
+    <div class="cover bg-left bg-center-1" style="background-image: url(https://s3.amazonaws.com/nikeinc/assets/42873/SP_16_Legacy_hd_1600.jpeg?1433893674)")>
+           <div class="bg-black-10 pb3 pb3-m pb3-l">
+            <nav class="dt w-100 mw8 center"> 
+            <div class="pa3">
+
+
+     {% comment %} <nav>
+         <div class="flex items-center justify-center pa0">
+           <a class="f5 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="{% url 'home' %}"><span>Home</span></a>
+    {% if user.is_authenticated %}
+       <p class= "f5 green pa0 bg-white fw4 dn dib-ns pv1 ph1">  You are logged in as: {{ user.username }}</p> 
+       <a class="f5 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="{% url 'auth_logout' %}"><span>Sign Out</span></a><div>
+       
+    {% else %}
+        <a class="f5 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="{% url 'auth_login' %}"><span>Sign In</span></a>
+        <a class="f5 link dim ph2 pv2 mb2 dib white bg-red" href="{% url 'registration_register' %}"><span>Sign Up</span></a></span></div>
+    {% endif %}
+
+        </nav>  {% endcomment %}
+        </div>
+        <div class="tc-1 mt4 mt5-m mt6-1 ph1">
+        <div class="flex items-center justify-center pa0">
+        <h1 class="f2 f1-1 fw2 black mb0 lh-title">Sole Exchange</h1>
+        </div>
+        {% comment %} <div class="flex items-center justify-center pa0"> {% endcomment %}
+        <h2 class="fw1 f3 pa0 tc items-center justify-center black mt3 mb1">Rock shoes from our collection of kicks and send them back when you're done.</h2>
+        <h2 class="fw1 f3 pa0 tc items-center justify-center black mt1 mb4">We'll send you a new pair!</h2>
+        </div>
+        <div class="flex items-center justify-center pa0">
+        <a class="f4 link dim ph2 pv2 mb2 dib white bg-black" href="{% url 'register' %}">Sign Up</a>
+                <span class="dib v-mid ph3 white mb3"></span>
+        <a class="f4 link dim ph2 pv2 mb2 dib white bg-black" href="{% url 'home' %}">Plans</a>
+        </div>
+        </div>
+        </div>
+        </div>
+
+        </nav>
+   </div> 
+</div>
+</header>
+<article class="cf ph3 ph5-ns pv5 vh-100 dt w-100">
+<div class="tc-1 mt4 mt5-m mt6-1 ph1">
+{% comment %} {% paginate shoes %}{% get_pages %} {% endcomment %}
+    {% for shoe in shoes %}
+    <a href={% url 'shoe_detail' shoe_id=shoe.pk %}><img src="{{ shoe.image }}"></a>
+    <h5>{{ shoe.name }}</h5>
+    <h7>{{ shoe.description}}</h7>
+    
+    
+
+    {% endfor %}
+
+{% endblock content %}
+
+ {% block footer %}
+ {% endblock footer %}
