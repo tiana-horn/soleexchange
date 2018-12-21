@@ -10,6 +10,6 @@ def index(request):
 
 def shoe_detail(request, slug):
     shoe = Shoe.objects.get(slug=slug)
-    return render(request, 'core/templates/shoe_detail.html', {
+    return render(request, 'shoe_detail.html', {
         'shoe': shoe,
     })

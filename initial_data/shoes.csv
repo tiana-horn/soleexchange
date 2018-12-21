@@ -1,9 +1,4 @@
-name,description,color,picture,size,is_jordan,is_van,is_yeezy,is_airmax,is_airforce,slug
-Air Jordan 11 Retro,"Perhaps the most popular basketball shoe of all time, the _Concord_ Air Jordan 11 is the definition of legendary. Worn on court by Michael Jordan on the way to his fourth championship with the Bulls, the shoe is considered a masterpiece by many, and is one of the most celebrated sneakers now and forever.",white,concord.jpeg,10,1,0,0,0,0,concord11
-Nike Air Max,,,,,,,,,,
-Adidas Yeezy Zebra,,,,,,,,,,
-Vans Hightop,,,,,,,,,,
-Space Jam,,,,,,,,,,
-Foamposites,,,,,,,,,,
-Yeezy Boost,,,,,,,,,,
-Air Jordan 1,,,,,,,,,,
+name,description,color,size,is_jordan,is_van,is_yeezy,is_airmax,is_airforce,slug,picture
+Air Jordan 11 Retro,"One of the most popular basketball shoe of all time, the Concord Air Jordan 11 is the definition of legendary. Worn on court by Michael Jordan on the way to his fourth championship with the Bulls, the shoe is considered a masterpiece by many, and is one of the most celebrated sneakers now and forever.",white,10,1,0,0,0,0,concord11,concord.jpg
+Yeezy Boost 350 V2,The adidas Yeezy Boost 350 v2 _Zebra 2018_ is the restocked version of the popular Zebra colorway that first released a year earlier. The 2018 Zebra Yeezys feature the same color scheme as the initial release overall.,white,8,0,0,1,0,0,boost350,yeezy.jpeg
+Jordan Retro 1 OG,"Perhaps the most iconic sneaker of all-time, this original Chicago colorway is the cornerstone to any sneaker collection. Made famous in 1985 by Michael Jordan, the shoe has stood the test of time, becoming the most famous colorway of the Air Jordan 1. This 2015 release saw the Chicago colorway return to its most accurate construction since the first retro in 1994, complete with Nike Air branding on the tongue.",red,9,1,0,0,0,0,jordanretro1,jordanretro.jpg
