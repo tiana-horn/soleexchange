@@ -44,6 +44,9 @@ INSTALLED_APPS = [
 
     # installed apps
     'django_extensions',
+    'registration',
+    'allauth',
+
 
     # my apps
     'core',
@@ -132,13 +135,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIR = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 AUTH_USER_MODEL = "core.User"
 
 django_heroku.settings(locals())
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
