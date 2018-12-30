@@ -4,8 +4,9 @@
 {% comment %} {% load el_pagination_tags %} {% endcomment %}
 
 {% block title %}
-    Sole Exchange - {{ block.super }}
+    Sole Exchange {{ block.super }}
 {% endblock title %}
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script src="{% static 'js/bootstrap.js' %}" defer></script>
 
@@ -92,11 +93,11 @@
 <div class="tc-1">
 {% comment %} {% paginate shoes %}{% get_pages %} {% endcomment %}
     {% for shoe in shoes %}
-    <div class=" fl w-30 dib justify-between items-center center">
+    <div class=" fl w-30 dib ma justify-between items-center center">
     
-    <a href={% url 'shoe_detail' slug=shoe.slug %}><img src="{{ shoe.picture.url }}"></a>
-    <h2>{{ shoe.name }}</h2>
-    <h5>{{ shoe.description}}</h5>
+    <a class= "ma2" href={% url 'shoe_detail' slug=shoe.slug %}><img src="{{ shoe.picture.url }}"></a>
+    <h2 class= "ma2">{{ shoe.name }}</h2>
+    <h5 class= "ma2">{{ shoe.description}}</h5>
     </div>
     
 
