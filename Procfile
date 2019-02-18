@@ -1,1 +1,1 @@
-web: gunicorn sole-exchange.wsgi
+web: gunicorn soleExchange.wsgi
